@@ -11,14 +11,6 @@ parser = lxml.html.HTMLParser()
 tree = etree.parse('e:\\users\\mike\\documents\\bookmarks_12_5_14_small.html', parser)
 root = tree.getroot()
 
-
-
-
-for element in root.iter('a'):
-    print("%s - %s - %s" % (element.tag, element.text, element.attrib))
-
-print("hello world")
-
 clean_links = {}
 pre_text = "<DT><A "
 post_text = "</A>"
